@@ -1,0 +1,38 @@
+{
+    "name": "eoler/omnipay-corvuspay",
+    "type": "library",
+    "description": "CorvusPay driver for Omnipay payment processing library",
+    "keywords": [
+        "gateway",
+        "merchant",
+        "omnipay",
+        "corvuspay",
+        "pay",
+        "payment",
+        "purchase"
+    ],
+    "homepage": "https://github.com/eoler/omnipay-corvuspay",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Danilo Cuculić",
+            "email": "eoler@castus.me"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Omnipay\\CorvusPay\\": "src/"
+        }
+    },
+    "require": {
+        "omnipay/common": "^3"
+    },
+    "require-dev": {
+        "omnipay/tests": "^3"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    }
+}
