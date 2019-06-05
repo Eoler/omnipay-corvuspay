@@ -44,9 +44,9 @@ composer require eoler/omnipay-corvuspay
 ```php
     $gateway = Omnipay::create('CorvusPay');
     $gateway->initialize([
-        'apiKey'   => env('STORE_ID'),
-        'storeId'  => env('API_KEY'),
-        'testMode' => env('API_KEY'),
+        'apiKey'   => env('API_KEY'),
+        'storeId'  => env('STORE_ID'),
+        'testMode' => env('APP_DEBUG'),
         'language' => \App::getLocale(),
     ]);
 ```
@@ -69,9 +69,9 @@ composer require eoler/omnipay-corvuspay
 ```php
     $gateway = Omnipay::create('CorvusPay');
     $gateway->initialize([
-        'apiKey'   => env('STORE_ID'),
-        'storeId'  => env('API_KEY'),
-        'testMode' => env('API_KEY'),
+        'apiKey'   => env('API_KEY'),
+        'storeId'  => env('STORE_ID'),
+        'testMode' => env('APP_DEBUG'),
         'language' => \App::getLocale(),
     ]);
 

@@ -21,8 +21,7 @@ class PurchaseResponse extends AbstractResponse implements RedirectResponseInter
         return true;
     }
     /**
-     * Get redirect URL
-     * @return string
+     * {@inheritdoc}
      */
     public function getRedirectUrl()
     {
