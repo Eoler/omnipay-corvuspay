@@ -27,6 +27,7 @@ class Gateway extends AbstractGateway
             'language' => 'hr',
             'storeId'  => '',
             'apiKey'   => '',
+            'flexInstallments' => '',
         ];
     }
     /**
@@ -44,6 +45,7 @@ class Gateway extends AbstractGateway
     {
         return $this->getParameter('language');
     }
+
     /**
      * @param string $value
      * @return Gateway provides a fluent interface
@@ -59,6 +61,7 @@ class Gateway extends AbstractGateway
     {
         return $this->getParameter('storeId');
     }
+
     /**
      * @param string $value
      * @return Gateway provides a fluent interface
@@ -73,6 +76,32 @@ class Gateway extends AbstractGateway
     public function getApiKey()
     {
         return $this->getParameter('apiKey');
+    }
+
+    /**
+     * @param string $value
+     * @return Gateway provides a fluent interface
+     */
+    public function setFlexInstallments($value)
+    {
+        return $this->setParameter('flexInstallments', $value);
+    }
+    /**
+     * @return mixed
+     */
+    public function getFlexInstallments()
+    {
+        return $this->getParameter('flexInstallments');
+    }
+    /**
+     * @param string $min  Minimum monthly installments (2+)
+     * @param string $max  Maximum monthly installments (-99)
+     * @param boolean $oneTime  One-time payments are allowed
+     * @return Gateway provides a fluent interface
+     */
+    public function initFlexInstallments($min, $max, $oneTime = true)
+    {
+        return $this->setFlexInstallments(sprintf('%s%02d%02d', $oneTime ? 'Y' : 'N', $min, $max));
     }
 
     /**
